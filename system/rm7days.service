@@ -1,0 +1,9 @@
+[Unit]
+Description=rm 7days ago videos
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/find /var/foo/bar/ -type f -mtime +7 -exec rm {} \;
+
+[Install]
+WantedBy=multi-user.target

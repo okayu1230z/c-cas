@@ -1,0 +1,9 @@
+[Unit]
+Description=motion start service
+After=storage-mount.service
+
+[Service]
+ExecStart=motion
+
+[Install]
+WantedBy=multi-user.target
