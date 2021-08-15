@@ -1,0 +1,9 @@
+[Unit]
+Description=SSD mount service
+Before=network.target
+
+[Service]
+ExecStart=mount -t ext4 /dev/sda /mnt/ssd1
+
+[Install]
+WantedBy=multi-user.target

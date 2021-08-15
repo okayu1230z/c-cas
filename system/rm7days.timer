@@ -1,0 +1,8 @@
+[Unit]
+Description=timer rm7days
+
+[Timer]
+OnUnitActiveSec=86400
+
+[Install]
+WantedBy=multi-user.target
