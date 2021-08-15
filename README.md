@@ -7,8 +7,9 @@ This is C-CAS (Compact-CameraAndStorage), which provides cameras, storage, and e
 ## Equipment needed
 
 - Linux machine: Raspberry Pi4, ant others
-- Camera: USB connected type, sensor type (https://www.amazon.co.jp/gp/product/B08QYZ91D2)
-- Storage: SSD, HDD
+- OS: Ubuntu 18.04 LTS, 20.04 LTS, 21.04
+- Camera: USB connected type, sensor type, [example item](https://www.amazon.co.jp/gp/product/B08QYZ91D2)
+- Storage: SSD, HDD, [example item](https://www.amazon.co.jp/dp/B07JG8NN8R)
 
 The test environment is Ubuntu 20.04 on Raspberry Pi4, SSD with SATA connection, camera with USB connection.
 
@@ -69,9 +70,11 @@ Configure the necessary items in the `/etc/motion/motion.conf` file. Rewrite it 
 - movie_output on
 - movie_filename movie/%Y%m%d/%H%M%S
 - movie_codec mp4
+
 If you want to save the image
 - snapshot_filename picture/%Y%m%d/%H%M%S
 - snapshot_interval 10
+
 Access from other than localhost
 - webcontrol_localhost off
 - stream_localhost off
@@ -136,14 +139,14 @@ If you want to view C-CAS from the web,
 $ cd c-cas/httpd; docker-compose up -d
 ```
 
-View C-CAS from the web -> http://<ip_address>:8082
+View C-CAS from the web -> `http://<ip_address>:8082`
 
 If you want to use auto remove data from ssd/hdd,
 you can use system/rm7days.service, rm7days.timer
 
-Motion Control is at http://<ip_address>:8080
+Motion Control is at `http://<ip_address>:8080`
 
-Streaming is at http://<ip_address>:8081
+Streaming is at `http://<ip_address>:8081`
 
 ## (Optional) USB Temp 
 
